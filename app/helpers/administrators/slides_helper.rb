@@ -1,0 +1,2 @@
+module Administrators::SlidesHelper
+end

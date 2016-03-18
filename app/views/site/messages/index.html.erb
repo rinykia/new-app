@@ -1,0 +1,20 @@
+<div class="container">
+  <h3 class="text-center">Новости</h3>
+    <% @messages.each do |message| %>
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div  class="text-right right">
+          <small><%= message.created_at.strftime("%d.%m.%Y, %H:%M") %></small>
+        </div>
+        <div class="text-uppercase"><%= link_to message.title, message %></div>
+        <%= link_to image_tag(message.picture, class: 'img-responsive'), message %>
+        <div class="text-center">
+          <div><%= truncate(strip_tags(message.article), length: 100) %></div>
+        </div>     
+        <div class="text-center">
+          <%= link_to 'Читать', message, class: 'btn btn-default' %>               
+        </div>
+        <br/>
+    </div>
+ 
+    <% end %>
+</div>

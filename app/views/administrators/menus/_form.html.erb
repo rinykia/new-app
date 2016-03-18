@@ -1,0 +1,37 @@
+  <%= form_for([:administrators, @menu], :multipart => true ) do |f| %>
+  <% if @menu.errors.any? %>
+    <div id="error_explanation">
+      <h5><%= pluralize(@menu.errors.count, "error") %> prohibited this post from being saved:</h5>
+
+      <ul>
+      <% @menu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Краткое описание категории(пример: Меню горячих блюд)<br>
+    <%= f.text_field :article, class: 'form-control' %>
+  </div><br/>
+  <div class="field">
+    Название категории(пример: Горячее)<br>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div><br/>
+  <div class="field">
+    Количество(пример: Выход, г)<br>
+    <%= f.text_field :quantity, class: 'form-control' %>
+  </div><br/>
+  <div class="field">
+    Цена(пример: Цена, ГРН)<br>
+    <%= f.text_field :price, class: 'form-control' %>
+  </div><br/>
+  <div class="field">
+    Картинка категории меню(500х300px)<br>
+    <%= f.file_field :image %>
+  </div><br/>
+  <div class="actions">
+    <%= f.submit 'Сохранить', class:'btn btn-success' %>
+  </div>
+<% end %>

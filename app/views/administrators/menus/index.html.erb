@@ -1,0 +1,32 @@
+<div class="container">
+  <%= link_to 'Добавить', new_administrators_menu_path, class: 'btn btn-primary'  %>
+  <h4 class="text-center">Список позиций меню</h4>
+  <p id="notice"><%= notice %></p>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-3">Краткое описание категории</th>
+        <th class="col-md-2">Название</th>
+        <th class="col-md-2">Количество</th>
+        <th class="col-md-1">Цена</th>
+        <th class="col-md-1">Картинка</th>
+        <th class="col-md-3">Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.article %></td>
+        <td><%= menu.title %></td>
+        <td><%= menu.quantity %></td>
+        <td><%= menu.price %></td>
+        <td><%= image_tag(menu.image, class: 'ex1') %></td>
+        <td>
+          <%= link_to "Редактировать", edit_administrators_menu_path(menu), class: 'btn btn-success' %>
+          <%= link_to 'Destroy', administrators_menu_path(menu), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

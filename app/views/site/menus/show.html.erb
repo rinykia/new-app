@@ -1,0 +1,45 @@
+<div class="container">  
+
+
+
+  <h3 class="text-center"><%= @menu.article %></h3>
+  <div class="text-center">
+    <img class="image1" src="/assets/podnos_mini.png">
+  </div>
+  <table class="table menus">
+    <thead>
+      <tr>
+        <td class="text-center col-md-8"><%= @menu.title %></td>
+        <td class="col-md-2 text-right"><%= @menu.quantity %></td>
+        <td class="col-md-1 text-right"><%= @menu.price %></td>      
+      </tr>
+    </thead>
+    <tbody>
+      <% @menu.menu_items.each do |menu_item| %>
+        <tr>
+          <td class="text-center"><%= menu_item.title %><%= menu_item.description %></td>
+          <td class="text-right"><%= menu_item.quantity %></td>
+          <td class="text-right"><%= number_to_currency(menu_item.price, unit: "", separator: ",", delimiter: "") %></td>  
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br/>
+  <div class="text-center">
+    <%= link_to 'Все меню', menus_path(@menu), class:'btn btn-default' %>
+  </div>
+  <br/>
+
+      <% @menus.each do |menu| %>
+    <div class="menuinmenu col-lg-1 col-md-1 col-sm-2 col-xs-3"> 
+     
+      <%= link_to menu.title, menu_path(menu), class:'btn btn-default text-center' %>       
+      <br/>
+    </div>
+  <% end %>
+</div>
+
+     
+
+
+

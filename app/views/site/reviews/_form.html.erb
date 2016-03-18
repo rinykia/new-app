@@ -1,0 +1,33 @@
+<%= form_for(@review) do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    
+    <%= f.text_field :name, class: 'form-control input-sm', placeholder: 'Имя' %>
+   <br/>
+
+    
+    <%= f.text_field :email, class: 'form-control input-sm', placeholder: 'Email(не публикуется)' %>
+<br/>
+  
+    
+    <%= f.text_field :title, class: 'form-control input-sm', placeholder: 'Заголовок(не обязательно)' %>
+<br/>
+  
+   
+    <%= f.text_area :body, class: 'form-control input-sm', placeholder: 'Место для комментария' %>
+<br/>
+  <div class="actions">
+    <%= f.submit 'Отправить', class: "btn btn-default btn-sm" %>
+  </div>
+<% end %>

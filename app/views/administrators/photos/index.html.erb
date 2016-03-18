@@ -1,0 +1,26 @@
+<div class="container">
+  <%= link_to 'Добавить', new_administrators_photo_path, class: 'btn btn-primary'  %>
+  <h4 class="text-center">Список фотографий</h4>
+  <p id="notice"><%= notice %></p>
+  <table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th class="col-md-3">ID</th>
+				<th class="col-md-3">Картинка</th>
+				<th class="col-md-6">Действие</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @photos.each do |photo| %>
+			<tr>
+				<td><%= photo.id %></td>
+				<td><%= image_tag(photo.image, class: "ex1") %></td>
+				<td>
+					<%= link_to "Редактировать", edit_administrators_photo_path(photo), class: 'btn btn-success' %>
+					<%= link_to 'Destroy', administrators_photo_path(photo), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+				</td>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+							

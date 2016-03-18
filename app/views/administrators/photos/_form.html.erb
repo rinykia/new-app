@@ -1,0 +1,18 @@
+<%= form_for([:administrators, @photo], class: "uk-form-stacked", :multipart => true ) do |f| %>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h5><%= pluralize(@photo.errors.count, "error") %> prohibited this foto from being saved:</h5>
+      <ul>
+        <% @photo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.file_field :image  %><br/>
+  <b>Выберите альбом из списка: </b><br/> 
+  <%= f.select :album_id , Album.all.collect {|album| [album.name, album.id ]}, class: "table-group-action-input form-control input-medium" %>
+  <br/>
+  <br/>
+  <%= f.submit 'Сохранить', :class => 'btn btn-primary' %>
+<% end %>

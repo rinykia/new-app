@@ -1,0 +1,28 @@
+<div class="container">
+  <%= link_to 'Добавить Альбом', new_administrators_album_path, class: 'btn btn-primary'  %>
+  <h4 class="text-center">Список альбомов</h4>
+  <p id="notice"><%= notice %></p>
+  <table class="table table-bordered table-hover">  
+  	<thead>
+  		<tr>
+  			<th class="col-md-1">ID</th>
+  			<th class="col-md-5">Названиe</th>
+  			<th class="col-md-3">Обложка</th>
+  			<th class="col-md-3">Действие</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+      <% @albums.each do |album| %>
+  		<tr>
+  			<td><%= album.id %></td>
+  			<td><%= album.name %></td>
+  			<td><%= image_tag(album.cover, class: "ex1") %></td>
+  			<td>
+  				<%= link_to 'Редактировать', edit_administrators_album_path(album), class: 'btn btn-success' %>
+          <%= link_to 'Удалить', administrators_album_path(album), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+        </td>
+  		</tr>
+      <% end %>
+  	</tbody>  
+  </table>
+</div>

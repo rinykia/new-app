@@ -1,0 +1,23 @@
+<%= form_for([:administrators, @menu_item], :multipart => true ) do |f| %>
+  <% if @menu_item.errors.any? %>
+    <div id="error_explanation">
+      <h5><%= pluralize(@menu_item.errors.count, "error") %> prohibited this post from being saved:</h5>
+
+      <ul>
+      <% @menu_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Название блюда' %><br/>
+    <%= f.text_field :description, class: 'form-control', placeholder: '(описание)' %><br/>
+    <%= f.text_field :quantity, class: 'form-control', placeholder: 'Количество(г,мл), формат(000/000/000)' %><br/>
+    <%= f.text_field :price, class: 'form-control', placeholder: 'Цена' %><br/>
+    Выберите меню из списка:
+    <%= f.select :menu_id, Menu.all.collect {|menu| [menu.title, menu.id ]}, class: "table-group-action-input form-control input-medium" %>
+    <br/>
+    <br/>
+    <%= f.submit 'Сохранить', class: 'btn btn-success' %></td>
+<% end %>    
+   

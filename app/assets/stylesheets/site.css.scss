@@ -1,0 +1,312 @@
+@import"bootstrap-sprockets";
+@import"bootstrap";
+
+body{
+  font-family: "FuturaRegular";
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  padding-bottom: 90px;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+   
+  background-color: white;
+
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color:white;
+
+}
+.navbar-nav {
+float: none;
+text-align: center;
+}
+.navbar-nav li {
+float: none;
+display: inline-block;
+}
+.fon{
+  background-image:url(fon.png);
+  height: 120px;
+}
+.text_effect1{
+  font-size: 23px;
+  color: black;
+}
+.logotip{
+  line-height: 120px;
+}
+.t{
+  font-size: 30px;
+} 
+.readus{
+  margin-top:10px;
+}
+
+.right{
+  margin-bottom: -20px;
+
+}
+.menus{
+  font-family: "MyriadProCondRegular";
+  font-size: 20px;
+}
+.navbar .nav li > .text_effect {
+  color:#2d2d2d!important;
+ 
+  margin-bottom:-5px;
+    font-size: 16px;
+}
+.navbar .nav li > a:hover {
+  color: #c59d5f!important;
+
+}
+.foot{
+  width: 150px;
+}
+.foot1{
+  border: 1px solid #c59d5f;
+  padding-top:15px;
+  padding-bottom:5px;
+  
+}
+.i{
+  margin-top: -10px;
+  width:40px;
+  height:40px;
+  display:inline-block;
+  border-radius:20px;
+  -moz-border-radius:20px;
+  -webkit-border-radius:20px;
+  -khtml-border-radius:20px;
+  font-size:20px; 
+  color:#fff;
+  line-height:40px;
+  text-align:center;
+  background:#2d2d2d;
+  
+}
+.i:hover{
+  border-radius: 20px;
+  background-color: #c59d5f;
+  color:#2d2d2d;
+}
+
+.navbar{
+border: 1px solid #c59d5f;
+background-color: white;
+}
+.menu{
+  padding-top:-40px;
+}
+
+small{
+  color: grey;
+}
+h3{
+  margin-top: -10px;
+  
+  color: #2d2d2d;
+}
+.size{ 
+  font-size:18px;
+}
+
+a{
+  text-decoration: none!important;
+  color: #2d2d2d;
+}
+a:hover{
+  text-decoration: none!important;
+  color: #c59d5f;
+}
+.sizeimg{
+  width:200px;
+  height:200px;
+}
+
+.ex{
+  margin-top: -20px;  
+}
+.center{
+margin-left: auto;
+margin-right:auto;
+  
+
+}
+.ex1{
+  width: 370px;
+  height: 300px;
+
+}
+.left{
+  float:left;
+  font-size:18px;
+}
+.desc{
+  font-size:18px;
+}
+.list_line_odd{
+  float: right;
+
+}
+.list_line_even{
+  float: left;
+
+}
+
+#myCarousel .nav a small {
+    display:block;
+}
+#myCarousel .nav {
+  background:#eee;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}
+
+.sad{
+  width: 100%;
+  height: 100px;
+}
+.ex3{
+  position  : relative;
+  width   : 100%; /* for IE 6 */
+  margin-top:10px;
+
+}
+.news{
+  height:400px;
+}
+.menuindex{
+  font-family: "MyriadProCondRegular";
+  font-size: 24px;
+  
+}
+small{
+  color:#2d2d2d;
+
+}
+.th{
+  font-size:28px;
+
+}
+.menutext{
+  text-decoration:none;
+  position  : absolute;
+  top   : 40%;
+  left    : 0;
+  width   : 100%;
+  font-family:'RupsterScriptFree';
+  font-size: 30px;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 1em #000000; /* Параметры тени */
+}
+.menutext:hover{
+
+  color:#2d2d2d;
+  text-shadow: 1px 1px 2px white, 0 0 1em white; /* Параметры тени */
+}
+.contact1{
+  float:left;
+  
+}
+.contact2{
+  float:right;
+}
+
+
+/* font-family: "FuturaRegular"; */
+@font-face {
+    font-family: "FuturaRegular";
+    src: url("../fonts/FuturaRegular/FuturaRegular.eot");
+    src: url("../fonts/FuturaRegular/FuturaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/FuturaRegular/FuturaRegular.woff") format("woff"),
+    url("../fonts/FuturaRegular/FuturaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "FuturaBold"; */
+@font-face {
+    font-family: "FuturaBold";
+    src: url("../fonts/FuturaBold/FuturaBold.eot");
+    src: url("../fonts/FuturaBold/FuturaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/FuturaBold/FuturaBold.woff") format("woff"),
+    url("../fonts/FuturaBold/FuturaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: "MyriadProCondRegular";
+    src: url("../fonts/MyriadProCondRegular/MyriadProCondRegular.eot");
+    src: url("../fonts/MyriadProCondRegular/MyriadProCondRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProCondRegular/MyriadProCondRegular.woff") format("woff"),
+    url("../fonts/MyriadProCondRegular/MyriadProCondRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProCondBold"; */
+@font-face {
+    font-family: "MyriadProCondBold";
+    src: url("../fonts/MyriadProCondBold/MyriadProCondBold.eot");
+    src: url("../fonts/MyriadProCondBold/MyriadProCondBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProCondBold/MyriadProCondBold.woff") format("woff"),
+    url("../fonts/MyriadProCondBold/MyriadProCondBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProCondItalic"; */
+@font-face {
+    font-family: "MyriadProCondItalic";
+    src: url("../fonts/MyriadProCondItalic/MyriadProCondItalic.eot");
+    src: url("../fonts/MyriadProCondItalic/MyriadProCondItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProCondItalic/MyriadProCondItalic.woff") format("woff"),
+    url("../fonts/MyriadProCondItalic/MyriadProCondItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProCondBoldItalic"; */
+@font-face {
+    font-family: "MyriadProCondBoldItalic";
+    src: url("../fonts/MyriadProCondBoldItalic/MyriadProCondBoldItalic.eot");
+    src: url("../fonts/MyriadProCondBoldItalic/MyriadProCondBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProCondBoldItalic/MyriadProCondBoldItalic.woff") format("woff"),
+    url("../fonts/MyriadProCondBoldItalic/MyriadProCondBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face { font-family:'RupsterScriptFree';
+src:url('../fonts/RupsterScriptFree.eot');
+src:url('../fonts/RupsterScriptFree.eot?#iefix') format('embedded-opentype'),
+url('../fonts/RupsterScriptFree.woff') format('woff'),
+url('../fonts/RupsterScriptFree.ttf') format('truetype'),
+url('../fonts/RupsterScriptFree.svg#webfont') format('svg');
+font-weight: normal;
+font-style: normal;}

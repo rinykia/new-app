@@ -1,0 +1,33 @@
+<%= form_for([:administrators, @message], :multipart => true ) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h5><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h5>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <b>Название новости</b><br>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Название новости' %>
+  </div>
+  <div class="field">
+    <b>Краткое описание новости</b><br>
+    <%= f.text_field :article, class: 'form-control', placeholder: 'Краткое описание новости' %>
+  </div>
+  <div class="field">
+    <b>Описание новости</b><br>
+    <%= f.text_area :description, :class => 'ckeditor', placeholder: 'Описание новости'%>
+  </div>
+  <div class="field">
+    <b>Картинка новости(размер будет 200х200 px)</b><br>
+    <%= f.file_field :picture %><br/>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Сохранить', class: 'btn btn-success' %>
+  </div>
+<% end %>

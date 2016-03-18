@@ -1,0 +1,32 @@
+<div class="container">
+    <%= link_to 'Добавить категорию меню', new_administrators_menu_item_path, class: 'btn btn-primary'  %>
+    <h4 class="text-center">Список категорий позиций меню</h4>
+    <p id="notice"><%= notice %></p>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-6 text-center">Название/Описание</th>
+        <th class="col-md-2">Количество(г, мл)</th>
+        <th class="col-md-1">Цена(ГРН)</th>
+        <th class="col-md-3">Действие</th>
+      
+   
+      </tr>
+    </thead>
+    <tbody>
+      <% @menu_items.each do |menu_item| %>
+        <tr>
+          <td class="text-center"><%= menu_item.title %><%= menu_item.description %></td>
+          <td><%= menu_item.quantity %></td>
+          <td><%= number_to_currency(menu_item.price, unit: "", separator: ",", delimiter: "") %></td>          
+          <td>
+   
+              <%= link_to 'Редактировать', edit_administrators_menu_item_path(menu_item), class: 'btn btn-success' %>
+              <%= link_to 'Удалить', administrators_menu_item_path(menu_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+<h3 class="text-center">Добавить отзыв</h3>
+
+<%= render 'form' %>
+
+<h3 class="text-center">Отзывы</h3>
+    <% @reviews.each do |review| %>
+    <div class="thumbnail">
+       <b><%= review.name %></b>
+        <small><%= review.created_at.strftime("%d.%m.%Y в %H:%M") %></small><br/>
+        <b><%= review.title %></b><br/>
+        <%= review.body %><br/>
+    
+    </div>
+    <% end %>
+    <p id="notice"><%= notice %></p>
+
+
+<br>
+
+</div>

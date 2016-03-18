@@ -1,0 +1,31 @@
+<div class="container">
+  <h4 class="text-center">Сообщения</h4>
+  <p id="notice"><%= notice %></p>
+  <br>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-2">Врямя</th>
+        <th class="col-md-1">Имя</th>
+        <th class="col-md-1">Email</th>
+         <th class="col-md-3">Телефон</th>
+        <th class="col-md-5">Отзыв</th>
+        <th class="col-md-3">Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td class="shrift"><%= comment.created_at.strftime("%d.%m.%Y, %H:%M") %></td>
+        <td class="shrift"><%= comment.name %></td>
+        <td class="shrift"><%= comment.email %></td>
+        <td class="shrift"><%= comment.phone %></td>
+        <td class="shrift"><%= comment.body %></td>
+        <td>
+          <%= link_to 'Удалить', administrators_comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>        
+</div>

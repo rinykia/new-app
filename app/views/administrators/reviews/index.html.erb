@@ -1,0 +1,29 @@
+<div class="container">
+  <h4 class="text-center">Отзывы</h4>
+  <p id="notice"><%= notice %></p>
+  <br>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-2">Врямя</th>
+        <th class="col-md-1">Имя</th>
+        <th class="col-md-1">Заголовок</th>
+        <th class="col-md-5">Отзыв</th>
+        <th class="col-md-3">Действие</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td class="shrift"><%= review.created_at.strftime("%d.%m.%Y, %H:%M") %></td>
+        <td class="shrift"><%= review.name %></td>
+        <td class="shrift"><%= review.title %></td>
+        <td class="shrift"><%= review.body %></td>
+        <td>
+          <%= link_to 'Удалить', administrators_review_path(review), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>        
+</div>

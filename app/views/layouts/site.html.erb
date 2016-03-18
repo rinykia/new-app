@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Restoran</title>
+    <%= stylesheet_link_tag    'site', media: 'all' %>
+    <%= javascript_include_tag 'site' %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+
+        <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//unslider.com/unslider.js"></script>
+  </head>
+  <body>
+
+    <div class="container-fluid fon  hidden-sm hidden-xs">
+      <div class="row">
+        <div class="col-md-4 text-center logotip">     
+          <span class="glyphicon glyphicon-time"></span> 
+          Время работы: Пн-Вс:11:00 - 23:00
+        </div>
+        <div class="col-md-4 text-center t logotip"> 
+          <a href="/"><img  src="/assets/лого55.png"></a>
+        </div>
+        <div class="col-md-4 text-center logotip">      
+          <span class="glyphicon glyphicon-earphone"></span> 
+          (044) 464-16-05
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center hidden-md hidden-lg">
+      <div class="row">
+        <div>     
+          <span class="glyphicon glyphicon-time"></span> 
+          Время работы: Пн-Вс:11:00 - 23:00
+        </div>
+      
+        <div>      
+          <span class="glyphicon glyphicon-earphone"></span> 
+          (044) 464-16-05
+        </div>
+      </div>
+    </div>
+      
+
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>       
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav ">
+            <li class="dropdown">
+              <a href="/menus" class="dropdown-toggle text_effect" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">МЕНЮ<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'ВСЕ МЕНЮ', menus_path(@menu), class: "text_effect1" %></li>
+                <% @menus.each do |menu| %>
+                <li class="dropm">
+                  <%= link_to menu.title, menu_path(menu) %>
+                </li>
+                <% end %>
+              </ul>
+            </li>
+            <li><%= link_to "ФОТО", albums_path(@album), class: "text_effect" %></li>    
+            <li><%= link_to "НОВОСТИ", messages_path(@message), class: "text_effect" %></li>
+            <li><%= link_to "ОТЗЫВЫ", reviews_path(@review), class: "text_effect" %></li>
+            <li><%= link_to "КОНТАКТЫ", comments_path(@comment), class: "text_effect" %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<div class="container-fluid wrapper">
+  <div class="container-fluid content">
+    <%= yield %>
+    </div>
+
+      
+    <div class=" footer container-fluid foot1 hidden-sm hidden-xs">
+   
+ 
+      <div class="col-md-2">Ресторан "Сад-Моне"</div>
+      <div class="text-left col-md-2"><span class="glyphicon glyphicon-earphone"></span> (044) 464-16-05</div >
+      <div class="col-md-2"><span class="glyphicon glyphicon-map-marker"></span> г.Киев, ул.Сошенко 1а</div >
+      <div class="col-md-4"><span class="glyphicon glyphicon-time"></span> Время работы: Пн-Вс:11:00 - 23:00</div > 
+       
+     
+        <a href="https://vk.com/sadmone"><div class=" text-right col-md-1 vk i text-center">В</div></a>
+        <a href="https://www.facebook.com/sadmone.kiev"><div class="text-right col-md-1 fb i text-center">f</div></a>
+      
+
+    
+    </div>
+    </div>
+ 
+  </body>
+</html>

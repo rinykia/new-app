@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <h3 class="text-center">Все Меню</h3>
+  <% @menus.each do |menu| %>
+    <div class="col-md-2 col-sm-6 col-xs-12"> 
+      <%= link_to image_tag(menu.image,class: "ex3 img-responsive img-rounded"), menu %> 
+      <%= link_to menu.title, menu, class:'menutext text-center' %>       
+      <br/>
+    </div>
+  <% end %>
+</div>
+ 
+<div class="container menui">
+ 
+  <table class="col-md-12 menuindex">
+    <tr>
+      <td>
+        <% @menus.each do |menu| %>
+        <table class="col-lg-6 col-md-6 col-sm-12 col-xs-12 table-striped <%= cycle('list_line_odd', 'list_line_even') %>">
+          <thead>
+            <tr>
+              <td colspan="4" class="text-uppercase text-left th"><br/><%= menu.title %></td>
+            </tr>
+          </thead>
+          <tbody>
+          <% menu.menu_items.each do |menu_item| %>
+            <tr>
+              <td  class="text-left col-lg-3 col-md-3 col-sm-6 col-xs-6"><%= menu_item.title %><small> <%= menu_item.description %></small></td>
+              <td class="text-right col-lg-1 col-md-1 col-sm-2 col-xs-2"><%= menu_item.quantity %>г</td>
+              <td colspan="2"  class="text-center col-lg-2 col-md-2 col-sm-4 col-xs-4"><%= number_to_currency(menu_item.price, unit: "грн", separator: ",", delimiter: "", format: "%n %u") %></td> 
+              
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
