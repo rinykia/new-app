@@ -52,6 +52,7 @@ display: inline-block;
 }
 .fon{
   background-image:url('<%= asset_path("fon.png") %> ');
+  background-image:url(fon.png);
   height: 120px;
 }
 .text_effect1{
