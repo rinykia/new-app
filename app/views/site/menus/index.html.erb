@@ -24,7 +24,7 @@
           <tbody>
           <% menu.menu_items.each do |menu_item| %>
             <tr>
-              <td  class="text-left col-lg-3 col-md-3 col-sm-6 col-xs-6"><%= menu_item.title %><small> <%= menu_item.description %></small></td>
+              <td  class="text-left col-lg-3 col-md-3 col-sm-6 col-xs-6"><%= menu_item.title %><div class="smalltext"><%= menu_item.description %></div></td>
               <td class="text-right col-lg-1 col-md-1 col-sm-2 col-xs-2"><%= menu_item.quantity %>г</td>
               <td colspan="2"  class="text-center col-lg-2 col-md-2 col-sm-4 col-xs-4"><%= number_to_currency(menu_item.price, unit: "грн", separator: ",", delimiter: "", format: "%n %u") %></td> 
               
