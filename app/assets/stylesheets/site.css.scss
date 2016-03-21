@@ -21,7 +21,10 @@ ul.hr li {
   margin-right: 5px; /* Отступ слева */
   padding: 3px; /* Поля вокруг текста */
 }
-
+ul.hr li a:hover,
+ul.hr li a:focus{
+  color: #c59d5f;
+}
 .wrapper {
   position: relative;
   min-height: 100%;
