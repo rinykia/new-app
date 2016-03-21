@@ -4,7 +4,7 @@
 
   <h3 class="text-center"><%= @menu.article %></h3>
   <div class="text-center">
-    <img class="image1" src="/assets/podnos_mini.png">
+   <img class="image1" src="/assets/podnos_mini5.png"> 
   </div>
   <table class="table menus">
     <thead>
@@ -17,7 +17,7 @@
     <tbody>
       <% @menu.menu_items.each do |menu_item| %>
         <tr>
-          <td class="text-center"><%= menu_item.title %><%= menu_item.description %></td>
+          <td class="text-center"><%= menu_item.title %> <small class="smalltext1"><%= menu_item.description %></small></td>
           <td class="text-right"><%= menu_item.quantity %></td>
           <td class="text-right"><%= number_to_currency(menu_item.price, unit: "", separator: ",", delimiter: "") %></td>  
         </tr>

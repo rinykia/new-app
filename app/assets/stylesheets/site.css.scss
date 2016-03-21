@@ -1,19 +1,25 @@
 @import"bootstrap-sprockets";
 @import"bootstrap";
 
-body{
-  font-family: "FuturaRegular";
-  height: 100%;
-  width: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 html,
 body {
+  font-family: "FuturaRegular";
   height: 100%;
+}
+
+ul.hr {
+  margin: 0; /* Обнуляем значение отступов */
+  padding: 4px; /* Значение полей */
+  border: 1px solid #c59d5f;
+}
+ul.hr li {
+  display: inline; /* Отображать как строчный элемент */
+  margin-right: 5px; /* Отступ слева */
+  padding: 3px; /* Поля вокруг текста */
 }
 
 .wrapper {
@@ -96,26 +102,35 @@ display: inline-block;
   padding-bottom:5px;
   
 }
+
+.wwidth{
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+}
 .i{
+
   margin-top: -10px;
   width:40px;
   height:40px;
   display:inline-block;
-  border-radius:20px;
-  -moz-border-radius:20px;
-  -webkit-border-radius:20px;
-  -khtml-border-radius:20px;
-  font-size:20px; 
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -khtml-border-radius:5px;
+  font-size:40px; 
   color:#fff;
-  line-height:40px;
+  margin-left:3px;
+  line-height:48px;
   text-align:center;
-  background:#2d2d2d;
+  background:#c59d5f;
   
 }
 .i:hover{
-  border-radius: 20px;
-  background-color: #c59d5f;
-  color:#2d2d2d;
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  
 }
 
 .navbar{
@@ -213,6 +228,10 @@ margin-right:auto;
   color:#a1a1a1;
   font-size:14px;
 
+}
+.smalltext1{
+  color:#2d2d2d;
+  font-size:16px; 
 }
 .th{
   font-size:28px;

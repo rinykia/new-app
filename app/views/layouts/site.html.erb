@@ -66,10 +66,15 @@
         </div>
       </div>
     </div>
-      
-
-
-    <nav class="navbar navbar-default">
+  <div class="container-fluid text-center">    
+    <ul class="hr hidden-lg hidden-md">
+    <li><%= link_to 'МЕНЮ', menus_path(@menu), class: "text_effect" %></li>
+    <li><%= link_to "ОТЗЫВЫ", reviews_path(@review), class: "text_effect" %></li>
+    <li><%= link_to "КОНТАКТЫ", comments_path(@comment), class: "text_effect" %></li>
+  </ul>
+  <br class="hidden-md hidden-lg">
+  </div>
+    <nav class="navbar navbar-default hidden-sm hidden-xs">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -119,8 +124,8 @@
       <div class="col-md-4"><span class="glyphicon glyphicon-time"></span> Время работы: Пн-Вс:11:00 - 23:00</div > 
        
      
-        <a href="https://vk.com/sadmone"><div class=" text-right col-md-1 vk i text-center">В</div></a>
-        <a href="https://www.facebook.com/sadmone.kiev"><div class="text-right col-md-1 fb i text-center">f</div></a>
+        <a href="https://vk.com/sadmone"><div class="col-md-1 vk i text-center">В</div></a>
+        <a href="https://www.facebook.com/sadmone.kiev"><div class="col-md-1 fb i text-center">f</div></a>
       
 
     
