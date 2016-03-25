@@ -51,7 +51,11 @@ gem 'draper'
 group :development do
   gem 'capistrano'
   gem 'capistrano3-ubuntu-server-prepare' 
+    gem 'capistrano-bundler'
+    gem 'capistrano3-unicorn'
+    gem 'capistrano-rvm'
 
+    gem 'capistrano3-git-push'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
