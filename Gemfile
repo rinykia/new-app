@@ -49,11 +49,9 @@ gem 'devise'
 gem 'draper'
 
 group :development do
-
   gem 'capistrano'
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rvm'
+  gem 'capistrano3-ubuntu-server-prepare' 
+
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

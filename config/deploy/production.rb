@@ -1,13 +1,10 @@
-server 'IP сервера', user: 'root', roles: %w{web app db}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
-
-# server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
+ server '95.213.236.239', user: 'rinykia', roles: %w{app db web}
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-
 
 
 # role-based syntax

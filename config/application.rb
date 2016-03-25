@@ -12,7 +12,7 @@ module Restoran
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-    config.serve_static_assets = true
+    config.serve_static_files = true
     config.assets.precompile += %w( search.css )
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.

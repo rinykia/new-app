@@ -1,56 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
-
-application = 'my_app_name'
-set :rvm_type, :user
-set :rvm_ruby_version, '2.0.0-p353'
-set :deploy_to, '/var/www/apps/my_app_name'
-
-namespace :foreman do
-  desc 'Start server'
-  task :start do
-    on roles(:all) do
-      sudo "start #{application}"
-    end
-  end
-
-  desc 'Stop server'
-  task :stop do
-    on roles(:all) do
-      sudo "stop #{application}"
-    end
-  end
-
-  desc 'Restart server'
-  task :restart do
-    on roles(:all) do
-      sudo "restart #{application}"
-    end
-  end
-
-  desc 'Server status'
-  task :status do
-    on roles(:all) do
-      execute "initctl list | grep #{application}"
-    end
-  end
-end
-
-namespace :git do
-  desc 'Deploy'
-  task :deploy do
-    ask(:message, "Commit message?")
-    run_locally do
-      execute "git add -A"
-      execute "git commit -m '#{fetch(:message)}'"
-      execute "git push"
-    end
-  end
-end
-
+set :application, 'new-app'
+set :repo_url, 'git@github.com:rinykia/new-app.git'
+#set :application, 'application'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
