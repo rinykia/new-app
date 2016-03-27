@@ -4,4 +4,9 @@ production:
   password: <%= ENV["deploy_me_database_password"] %>
   pool: 8
   database: {{ dbname }}
-  
+
+
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
