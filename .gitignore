@@ -15,8 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
+/config/provision/configs/settings.yml
+/config/provision/keys/id_rsa
+/config/provision/keys/id_rsa.pub
 
-/config/database.yml # доступ к базе данным 
-/Procfile # про него я еще расскажу 
-/config/deploy/ # файлы Capistrano 
-/shared/ # файлы, которых нет в репозитории, но они будут скопированы на сервер при первом деплое приложения
