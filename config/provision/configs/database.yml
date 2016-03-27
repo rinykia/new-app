@@ -1,5 +1,5 @@
 production:
-  adapter: sqlite3
+  adapter: postgresql
   username: postgres
   encoding: utf8
   pool: 8
