@@ -1,16 +1,24 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.4.0'
 
-set :application, 'restoran'
+set :application, 'new-app'
 set :repo_url, 'git@github.com:rinykia/new-app.git'
-set :rails_env, 'production'
-
-set :username, 'rinykia'
+set :branch, 'master'
+set :deploy_to, 'home/Rails/restoran'
 set :log_level, :info
-# Путь для деплоя
-set :deploy_to, "/home/#{fetch(:username)}/#{fetch(:application)}"
-set :linked_dirs, %w{public/upload}
-set :linked_files, %w{config/secrets.yml config/database.yml}
+# Копирующиеся файлы и директории (между деплоями)
+set :linked_files, %w{config/database.yml config/settings.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+
+# Ruby свистелки
+set :rbenv_type, :user
+set :rbenv_ruby, '2.2.4'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_roles, :all
+
+# А это рекомендуют добавить для приложений, использующих ActiveRecord
+set :puma_init_active_record, true
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
@@ -40,17 +48,7 @@ set :linked_files, %w{config/secrets.yml config/database.yml}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-namespace :setup do
-  desc 'Загрузка конфигурационных файлов на удаленный сервер'
-  task :upload_config do
-    on roles :all do
-      execute :mkdir, "-p #{shared_path}"
-      ['shared/config', 'shared/run'].each do |f|
-        upload!(f, shared_path, recursive: true)
-      end
-    end
-  end
-end
+
 namespace :deploy do
 
   desc 'Restart application'

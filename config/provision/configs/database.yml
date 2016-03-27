@@ -1,0 +1,6 @@
+production:
+  adapter: postresql
+  username: postgres
+  encording: utf8
+  pool: 8
+  database: {{ name }}_production

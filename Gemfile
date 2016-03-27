@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 group :production do
-  gem 'unicorn'
+  gem 'puma'
 end
 
 gem 'sqlite3', group: :development
@@ -49,10 +49,10 @@ gem 'devise'
 gem 'draper'
 
 group :development do
-  gem 'capistrano', '~> 3.2.1'
-  gem 'capistrano-rvm', '~> 0.1.1'
-  gem 'capistrano-bundler', '~> 1.1.3'
-  gem 'capistrano-rails', '~> 1.1.2'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma'
    #gem 'capistrano-bundler'
     #gem 'capistrano3-unicorn'
    # gem 'capistrano-rvm'
