@@ -6,6 +6,7 @@ group :production do
   gem 'puma'
   gem 'pg'
 end
+gem 'activerecord-postgresql-adapter'
 
 gem 'sqlite3', group: :development
 #gem 'rails_12factor', group: :production
