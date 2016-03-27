@@ -1,13 +1,6 @@
 production:
   adapter: postgresql
-  username: <%= ENV["deploy_me_database_user"] %>
-  password: <%= ENV["deploy_me_database_password"] %>
+  username: postgres
+  encoding: utf8
   pool: 8
-  database: db/production.sqlite3
-
-
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-
+  database: {{ name }}_production
