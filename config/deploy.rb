@@ -1,10 +1,14 @@
 # config valid only for Capistrano 3.1
 lock '3.4.0'
-
+# Название приложения
 set :application, 'new-app'
+# Путь к git репозиторию
 set :repo_url, 'git@github.com:rinykia/new-app.git'
+# Ветка по-умолчанию
 set :branch, 'master'
-set :deploy_to, 'home/Rails/restoran'
+# Директория для деплоя
+set :deploy_to, '/home/rinykia/applications/new-app'
+
 set :log_level, :info
 # Копирующиеся файлы и директории (между деплоями)
 set :linked_files, %w{config/database.yml config/settings.yml}
@@ -12,10 +16,14 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 # Ruby свистелки
 set :rbenv_type, :user
-set :rbenv_ruby, '2.2.4'
+set :rbenv_ruby, '2.2.1'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_roles, :all
 
+# А это рекомендуют добавить для приложений, использующих ActiveRecord
+set :puma_init_active_record, true
+
+#set :ssh_options,{ forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 # А это рекомендуют добавить для приложений, использующих ActiveRecord
 set :puma_init_active_record, true
 
