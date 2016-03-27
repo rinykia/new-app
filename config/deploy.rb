@@ -25,7 +25,6 @@ set :puma_init_active_record, true
 
 #set :ssh_options,{ forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 # А это рекомендуют добавить для приложений, использующих ActiveRecord
-set :puma_init_active_record, true
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

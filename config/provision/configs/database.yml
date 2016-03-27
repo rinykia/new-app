@@ -1,7 +1,7 @@
 production:
-  adapter: postresql
-  username: postgres
-  encording: utf8
+  adapter: postgresql
+  username: <%= ENV["deploy_me_database_user"] %>
+  password: <%= ENV["deploy_me_database_password"] %>
   pool: 8
-  database: {{ name }}_production
+  database: {{ dbname }}
   
