@@ -1,5 +1,5 @@
 # Рабочие директории приложения на сервере
-root        = '/home/rinykia/application'
+root        = '/home/Rails/restoran/application'
 rails_root  = "#{root}/current"
 
 # Файлы, хранящие идентификаторы запущенных Unicorn-процессов

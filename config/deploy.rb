@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'application'
+set :application, 'restoran'
 set :repo_url, 'git@github.com:rinykia/new-app.git'
 set :rails_env, 'production'
 
