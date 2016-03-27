@@ -5,7 +5,7 @@ workers 2
 threads 1, 6
 
 app_dir = File.expand_path("../..", __FILE__)
-shared_dir = "/home/deploy/applications/deploy_me/shared"
+shared_dir = "/home/rinykia/applications/new-app/shared"
 
 # Default to production
 rails_env = ENV['RAILS_ENV'] || "production"

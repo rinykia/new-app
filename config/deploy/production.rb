@@ -8,6 +8,10 @@ role :app, %w{95.213.236.239}
 role :web, %w{95.213.236.239}
 role :db,  %w{95.213.236.239}
 
+server '95.213.236.239', user: 'rinykia', roles: %w{web app}
+
+set :stage, 'production'
+set :rails_env, 'production'
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +19,6 @@ role :db,  %w{95.213.236.239}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '95.213.236.239', user: 'rinykia', roles: %w{web app}
 
 
 # Custom SSH Options
