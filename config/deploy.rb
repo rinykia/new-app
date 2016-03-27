@@ -55,7 +55,16 @@ set :puma_init_active_record, true
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-
+desc 'Run rake tasks on server'
+task :rake do
+  on roles(:app), in: :sequence, wait: 5 do
+    within release_path do
+      with rails_env: :production do
+        execute :rake, ENV['task'], 'RAILS_ENV=production'
+      end
+    end
+  end
+end
 namespace :deploy do
 
   desc 'Restart application'

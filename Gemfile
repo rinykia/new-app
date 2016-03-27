@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-
-gem 'puma'
-
+group :production do
+  gem 'puma'
+end
 
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production
