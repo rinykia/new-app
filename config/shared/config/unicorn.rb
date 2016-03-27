@@ -1,5 +1,5 @@
 # Рабочие директории приложения на сервере
-root        = '/home/Rails/restoran/application'
+root        = '/home/Rails/restoran'
 rails_root  = "#{root}/current"
 
 # Файлы, хранящие идентификаторы запущенных Unicorn-процессов
