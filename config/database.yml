@@ -28,4 +28,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: db/production.sqlite3
+  username: rinykia
+  password: 12345678
+  database: rinykia

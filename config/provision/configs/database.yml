@@ -3,5 +3,5 @@ production:
   username: rinykia
   encoding: utf8
   pool: 8
-  database: rinykia
-  password: 12345678
+  database: rinykia_production
+
