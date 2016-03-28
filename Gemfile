@@ -5,7 +5,7 @@ gem 'rails', '4.2.5'
 
   gem 'puma'
   gem 'pg'
-gem 'activerecord-jdbcpostgresql-adapter'
+gem "postgres-pr"
 #gem 'postgresql'
 #gem 'activerecord-postgresql-adapter', '~> 0.0.1'
 gem 'sqlite3', group: :development
