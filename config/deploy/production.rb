@@ -4,11 +4,11 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{95.213.236.239}
-role :web, %w{95.213.236.239}
-role :db,  %w{95.213.236.239}
+#role :app, %w{95.213.236.239}
+#role :web, %w{95.213.236.239}
+#role :db,  %w{95.213.236.239}
 
-server '95.213.236.239', user: 'rinykia', roles: %w{web app}
+server '95.213.236.239', user: 'rinykia', roles: %w{web app db}
 
 set :stage, 'production'
 set :rails_env, 'production'
