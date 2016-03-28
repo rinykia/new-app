@@ -1,6 +1,7 @@
 production:
   adapter: postgresql
-  username: postgres
+  username: rinykia
   encoding: utf8
   pool: 8
-  database: {{ name }}_production
+  database: rinykia
+  password: 12345678

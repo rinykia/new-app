@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
   gem 'pg'
 
 #gem 'postgresql'
-  gem 'activerecord-postgresql-adapter', '~> 0.0.1'
+gem 'activerecord-postgresql-adapter', '~> 0.0.1'
 gem 'sqlite3', group: :development
 #gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
