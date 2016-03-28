@@ -27,7 +27,7 @@ test:
 
 production:
   <<: *default
- # adapter: postgresql
+  adapter: postgresql
   username: rinykia
   password: 12345678
   database: rinykia
