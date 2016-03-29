@@ -14,6 +14,9 @@ module Restoran
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.serve_static_files = true
     config.assets.precompile += %w( search.css )
+    config.assets.enabled = true 
+    config.assets.precompile += Ckeditor.assets 
+    #config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
