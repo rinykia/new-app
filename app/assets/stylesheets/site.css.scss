@@ -59,9 +59,10 @@ text-align: center;
 float: none;
 display: inline-block;
 }
+
 .fon{
   background-image:url('<%= asset_path("fon.png") %> ');
-  background-image:url(fon.png);
+  background-image:url(http://imgdepo.com/id/i9116220);
   height: 120px;
 }
 .text_effect1{
@@ -69,6 +70,7 @@ display: inline-block;
   color: black;
 }
 .logotip{
+  color:white;
   line-height: 120px;
 }
 .t{
@@ -112,21 +114,24 @@ display: inline-block;
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%;
 }
+.b{
+  margin-left: -5px;
+}
 .i{
 
-  margin-top: -10px;
-  width:40px;
-  height:40px;
+  margin-top: -5px;
+  width:30px;
+  height:30px;
   display:inline-block;
   border-radius:5px;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   -khtml-border-radius:5px;
-  font-size:40px; 
+  font-size:25px; 
   color:#fff;
   margin-left:3px;
-  line-height:48px;
-  text-align:center;
+ 
+  
   background:#c59d5f;
   
 }
