@@ -15,7 +15,7 @@
     <%= f.text_field :quantity, class: 'form-control', placeholder: 'Количество(г,мл), формат(000/000/000)' %><br/>
     <%= f.text_field :price, class: 'form-control', placeholder: 'Цена' %><br/>
     Выберите меню из списка:
-    <%= f.select :menu_id, Menu.all.collect {|menu| [menu.title, menu.id ]}, class: "table-group-action-input form-control input-medium" %>
+    <%= f.select :menu_id, Menu.all.reverse.collect {|menu| [menu.title, menu.id ]}, class: "table-group-action-input form-control input-medium" %>
     <br/>
     <br/>
     <%= f.submit 'Сохранить', class: 'btn btn-success' %></td>
