@@ -10,7 +10,15 @@ body {
   font-family: "FuturaRegular";
   height: 100%;
 }
-
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+.container1{
+  margin-top:15px;
+}
+.opisanie{
+  font-family: "MyriadProCondRegular";
+}
 ul.hr {
   margin: 0; /* Обнуляем значение отступов */
   padding: 4px; /* Значение полей */
@@ -62,7 +70,8 @@ display: inline-block;
 
 .fon{
   background-image:url('<%= asset_path("fon.png") %> ');
-  background-image:url(http://imgdepo.com/id/i9116220);
+  background-image:url(http://imgdepo.com/id/i9120963);
+  background-repeat: no-repeat;
   height: 120px;
 }
 .text_effect1{
@@ -102,6 +111,8 @@ display: inline-block;
   width: 150px;
 }
 .foot1{
+  color:white;
+  background-image: url(http://imgdepo.com/id/i9120963);
   border: 1px solid #c59d5f;
   padding-top:15px;
   padding-bottom:5px;
@@ -129,15 +140,13 @@ display: inline-block;
   -khtml-border-radius:5px;
   font-size:25px; 
   color:#fff;
-  margin-left:3px;
- 
-  
-  background:#c59d5f;
+  margin-left:3px; 
+  background:#2d2d2d;
   
 }
 .i:hover{
   border-radius: 5px;
-  background-color: #2d2d2d;
+  background-color:#c59d5f;
   
 }
 
@@ -223,6 +232,10 @@ margin-right:auto;
   width   : 100%; /* for IE 6 */
   margin-top:10px;
 
+}
+.title-news{
+  font-size:28px;
+  font-family: "MyriadProCondRegular";
 }
 .news{
   height:400px;

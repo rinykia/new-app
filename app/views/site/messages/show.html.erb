@@ -1,6 +1,5 @@
 <div class="container">
-  <%= image_tag(@message.picture, class: 'left') %>
-  <div class="text-uppercase text-center"><b><%= @message.title %></b></div><br/>
+<div class="text-uppercase text-center title-news"><b><%= @message.title %></b></div><br/>
   
 
   <%= (@message.description).html_safe %>
