@@ -89,7 +89,7 @@ display: inline-block;
   margin-top:10px;
 }
 
-.right{
+.right1{
   margin-bottom: -20px;
 
 }
@@ -119,12 +119,6 @@ display: inline-block;
   
 }
 
-.wwidth{
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%;
-}
 .b{
   margin-left: -5px;
 }
@@ -197,7 +191,7 @@ margin-right:auto;
   height: 300px;
 
 }
-.left{
+.left1{
   float:left;
   font-size:18px;
 }
@@ -211,16 +205,6 @@ margin-right:auto;
 .list_line_even{
   float: left;
 
-}
-
-#myCarousel .nav a small {
-    display:block;
-}
-#myCarousel .nav {
-  background:#eee;
-}
-#myCarousel .nav a {
-    border-radius:0px;
 }
 
 .sad{
@@ -269,7 +253,8 @@ margin-right:auto;
   color:white;
   text-shadow: 1px 1px 2px black, 0 0 1em #000000; /* Параметры тени */
 }
-.menutext:hover{
+.menutext:hover,
+.menutext:focus{
 
   color:#2d2d2d;
   text-shadow: 1px 1px 2px white, 0 0 1em white; /* Параметры тени */
