@@ -1,0 +1,49 @@
+---
+- hosts: 'all'
+  remote_user: 'root'
+
+  # В данном блоке объявляются переменные, которые будут использоваться в playbook и конфигах, представленных выше
+  vars:
+    # Версия ruby
+    ruby_version: '2.2.1'
+    # Пользователь, от лица которого будет происходит деплой
+    user: 'rinykia'
+    # Домашняя директория
+    home: '/home/{{ user }}'
+    # Директория установки Rbenv
+    rbenv_root: '{{ home }}/.rbenv'
+    # Название приложения
+    name: 'new-app'
+    # Путь до нашего приложения
+    application: '{{ home }}/applications/{{ name }}'
+
+    dbname: '{{ name }}_production'
+
+    dbuser: '{{ user }}'
+
+    dbpassword: '12345678'
+
+  # Список задач, которые будут выполнены последовательно
+  tasks:
+
+    # Rails setup | копируем .rbenv-vars с нашими переменными
+    - name: 'rails | copy .rbenv-vars'
+      template: 'src=configs/.rbenv-vars dest={{ application }}/shared/.rbenv-vars owner={{ user }} group={{ user }} mode=0644'
+
+    - name: 'create db user and grant access to database'
+      become: true
+      become_user: postgres
+      postgresql_user: db={{dbname}} name={{dbuser}} password={{dbpassword}} priv=ALL
+
+    - name: 'ensure user does not have unnecessary privilege'
+      become: true
+      become_user: postgres
+      postgresql_user: name={{dbuser}} role_attr_flags=NOSUPERUSER,NOCREATEDB
+
+    - name: 'postgresql | restart service'
+      service: name=postgresql state=restarted
+
+    - name: 'postgresql | copy database.yml'
+      template: 'src=configs/database.yml dest={{ application }}/shared/config/database.yml owner={{ user }} group={{ user }} mode=0644'
+
+
