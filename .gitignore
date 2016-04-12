@@ -15,8 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
-
-/config/provision/configs/settings.yml
-/config/provision/keys/id_rsa
-/config/provision/keys/id_rsa.pub
+/settings.yml
+/id_rsa
+/id_rsa.pub
 
