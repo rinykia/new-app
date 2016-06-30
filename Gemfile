@@ -52,11 +52,10 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma'
-   #gem 'capistrano-bundler'
-    #gem 'capistrano3-unicorn'
-   # gem 'capistrano-rvm'
-
-    #gem 'capistrano3-git-push'
+  # gem 'capistrano-bundler'
+  # gem 'capistrano3-unicorn'
+  # gem 'capistrano-rvm'
+  # gem 'capistrano3-git-push'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
