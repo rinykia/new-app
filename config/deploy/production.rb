@@ -8,7 +8,7 @@
 #role :web, %w{95.213.236.239}
 #role :db,  %w{95.213.236.239}
 
-server '95.213.236.239', user: 'rinykia', roles: %w{web app db}
+server '78.155.207.85', user: 'rinykia', roles: %w{web app db}
 
 set :stage, 'production'
 set :rails_env, 'production'
