@@ -2,19 +2,19 @@
 - hosts: 'all'
   remote_user: 'root'
 
-  # В данном блоке объявляются переменные, которые будут использоваться в playbook и конфигах, представленных выше
+ 
   vars:
-    # Версия ruby
+    
     ruby_version: '2.2.1'
-    # Пользователь, от лица которого будет происходит деплой
+    
     user: 'rinykia'
-    # Домашняя директория
+    
     home: '/home/{{ user }}'
-    # Директория установки Rbenv
+   
     rbenv_root: '{{ home }}/.rbenv'
-    # Название приложения
+    
     name: 'new-app'
-    # Путь до нашего приложения
+    
     application: '{{ home }}/applications/{{ name }}'
 
     dbname: '{{ name }}_production'
@@ -23,10 +23,10 @@
 
     dbpassword: '12345678'
 
-  # Список задач, которые будут выполнены последовательно
+  
   tasks:
 
-    # Rails setup | копируем .rbenv-vars с нашими переменными
+    
     - name: 'rails | copy .rbenv-vars'
       template: 'src=configs/.rbenv-vars dest={{ application }}/shared/.rbenv-vars owner={{ user }} group={{ user }} mode=0644'
 
