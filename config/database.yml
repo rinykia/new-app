@@ -18,4 +18,4 @@ production:
   username: postgres
   encording: utf8
   pool: 8
-  database: new-app_production
+  database: newapp_production
