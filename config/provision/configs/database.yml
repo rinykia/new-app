@@ -1,7 +1,7 @@
 production:
   adapter: postgresql
-  username: <%= ENV["deploy_me_database_user"] %>
-  password: <%= ENV["deploy_me_database_password"] %>
+  username: rinykia
+  password: '12345'
   pool: 8
   database: newapp_production
 
