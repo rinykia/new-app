@@ -15,7 +15,8 @@ test:
 
 production:
   adapter: postgresql
-  username: postgres
+  username: rinykia
+  password: 12345
   encording: utf8
   pool: 8
   database: newapp_production
