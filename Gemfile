@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 group :production do
-  gem 'puma'
+  #gem 'puma'
   gem 'pg'
 end
 #gem 'postgresql'
@@ -48,10 +48,10 @@ gem 'devise'
 gem 'draper'
 
 group :development do
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano3-puma'
+#  gem 'capistrano-rails'
+#  gem 'capistrano-rbenv'
+#  gem 'capistrano-bundler'
+#  gem 'capistrano3-puma'
   # gem 'capistrano-bundler'
   # gem 'capistrano3-unicorn'
   # gem 'capistrano-rvm'
