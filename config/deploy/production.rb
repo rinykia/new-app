@@ -1,4 +1,4 @@
-server '80.93.177.134', user: 'rinykia', roles: %w{web app db}
+server '78.155.207.6', user: 'rinykia', roles: %w{web app db}
 
 set :stage, 'production'
 set :rails_env, 'production'
