@@ -12,7 +12,7 @@ set :deploy_to, '/home/rinykia/applications/new-app'
 
 set :log_level, :info
 # Копирующиеся файлы и директории (между деплоями)
-set :linked_files, %w{config/database.yml config/settings.yml}
+set :linked_files, %w{config/database.yml config/settings.yml .rbenv-vars}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
 # Ruby свистелки
