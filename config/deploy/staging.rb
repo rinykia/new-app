@@ -10,7 +10,7 @@
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server '80.93.177.134', user: 'rinykia', roles: %w{web app db}
+server '78.155.207.6', user: 'rinykia', roles: %w{web app db}
 
 
 # Custom SSH Options
